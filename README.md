@@ -1,5 +1,23 @@
 # PostgreSQL接続のサンプル
 
+Java で PostgreSQL に接続するサンプルです。
+
+## 環境
+
+- macOS Sequoia 15.5
+- PostgreSQL 17.5
+- Java 24.0.1
+
+## 概要
+sample_db に接続して、usersテーブルを作成し、遅生まれの22歳の女性を抽出するサンプルです。
+
+## ポイント
+- SQL文のプレースホルダを使用し、プレースホルダにバインド値を設定します。
+- 長いSQL文を改行するには、テキストブロック(三重引用符)を使用すると、便利です。
+- SQL文の確認には、PreparedStatement#toString()メソッドを呼び出します。
+- PreparedStatement#executeQuery()メソッドにより、SQLを実行します。
+- 結果を表示するには、ResultSetを使用します。
+
 ```java
 /*
  DB接続のサンプル例
